@@ -112,7 +112,7 @@ if search_jisa:
             df1.columns = columns_list_mod
             df1['조직코드'] = df1['조직코드'].astype(str)
             df1 = df1.sort_values('인정실적-1', ascending=False).copy()
-            st.dataframe(df1.set_index(df1.columns[0]), use_container_width=True)
+            st.dataframe(df1.set_index(df1.columns[1]), use_container_width=True)
             # st.table(df1)
             # column_months = df_l.columns.tolist()
             # column_months = [i for i in column_months if i[:1]=="m"]
