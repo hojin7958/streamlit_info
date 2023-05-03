@@ -63,7 +63,11 @@ st.caption("파일최종업로드날짜  : "+str(mod_time)+ "  업로드날짜 �
 # 지점명 = 'GA2-3지점'
 
 jisa_list = df.현재대리점지사명.unique()
-search_jijum = st.selectbox("지점을 선택해주세요", ['GA2-3지점','GA2-1지점','GA2-2지점','GA2-4지점','GA2-5지점','GA2-6지점','GA2-7지점','GA2-8지점'])
+jijum_list = df.현재지점조직명.unique().tolist()
+jijum_list.sort()
+jijum_list1 = ['GA2-3지점']+jijum_list
+
+search_jijum = st.selectbox("지점을 선택해주세요", jijum_list1)
 search_jisa = st.text_input('지사명을 입력해주세요')
 
 
